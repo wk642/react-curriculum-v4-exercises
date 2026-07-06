@@ -7,6 +7,8 @@ export default function StudentWork() {
   const name = 'Winnie Kelley';
 
   // A variable for age
+  const age = 34;
+
   // A list of hobbies using an array
   return (
     <div>
