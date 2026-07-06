@@ -4,6 +4,8 @@
 export default function StudentWork() {
   //add variables here
   // A variable for name
+  const name = 'Winnie Kelley';
+
   // A variable for age
   // A list of hobbies using an array
   return (
