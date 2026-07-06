@@ -33,6 +33,13 @@ export default function StudentWork() {
       </p>
 
       {/* Map out my hobbies or interests so they all appear on the page in a list. */}
+      <h2>My Hobbies</h2>
+
+      <ul>
+        {hobbiesArray.map((hobby) => (
+          <li key={hobby}>{hobby}</li>
+        ))}
+      </ul>
     </div>
   );
 }
