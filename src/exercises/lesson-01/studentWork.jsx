@@ -10,6 +10,14 @@ export default function StudentWork() {
   const age = 34;
 
   // A list of hobbies using an array
+  const hobbiesArray = [
+    'True Crime',
+    'Pokemon',
+    'Building apps',
+    'Puzzles',
+    'Family time',
+  ];
+
   return (
     <div>
       {/* add JSX here */}
