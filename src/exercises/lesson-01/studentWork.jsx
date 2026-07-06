@@ -21,8 +21,8 @@ export default function StudentWork() {
   return (
     <div>
       {/* add JSX here */}
-      <p> Student output will go here </p>
       {/* A heading about me */}
+      <h1>About {name}</h1>
       {/* A short paragraph introducing myself */}
       {/* Map out my hobbies or interests so they all appear on the page in a list. */}
     </div>
