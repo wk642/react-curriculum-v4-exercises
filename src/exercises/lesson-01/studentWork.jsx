@@ -23,7 +23,15 @@ export default function StudentWork() {
       {/* add JSX here */}
       {/* A heading about me */}
       <h1>About {name}</h1>
+
       {/* A short paragraph introducing myself */}
+      <p>
+        I'm the engineer your company calls at 3 a.m. when it's throwing errors
+        and questioning its life choices. I build fullstack apps that turns
+        messy ideas into clean, accessible interfaces and APIs, and I obsess
+        over the tiny UI details no one notices until they break
+      </p>
+
       {/* Map out my hobbies or interests so they all appear on the page in a list. */}
     </div>
   );
