@@ -11,6 +11,8 @@ export default function SnackList() {
   ];
 
   // - Use JavaScript’s `.toSorted()` to return a new array ordered from **most favorite (rank 1) to least favorite**.
+  const sortSnacks = snacks.toSorted((a, b) => a.rank - b.rank);
+
   // - Render the sorted snacks as a list (ordered list or using `.map()`).
   // - Include at least **3–5** snacks.
 }
