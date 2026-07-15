@@ -15,4 +15,15 @@ export default function SnackList() {
 
   // - Render the sorted snacks as a list (ordered list or using `.map()`).
   // - Include at least **3–5** snacks.
+  return (
+    <>
+      <ol>
+        {sortSnacks.map((snacks) => (
+          <li key={snacks.name}>
+            {snacks.name} (rank {snacks.rank})
+          </li>
+        ))}
+      </ol>
+    </>
+  );
 }
