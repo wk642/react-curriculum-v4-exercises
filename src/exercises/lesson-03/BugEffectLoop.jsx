@@ -15,10 +15,15 @@ export default function BugEffectLoop() {
 
   useEffect(() => {
     setCount(count + 1);
-  });
+  }, []);
 
   return <p>Bug 1 Count: {count}</p>;
 }
 
 // Explanation:
 // (Write your explanation here)
+/**
+ * My change: added [] at the end of useEffect
+ * Before my change: the useEffect would run on every render which means the count would just keep going up.
+ * After my change: the useEffect will now only run when it is initially loaded.
+ */
