@@ -13,8 +13,7 @@ export default function BugMutatedState() {
   let [count, setCount] = useState(0);
 
   function handleAdd() {
-    count++;
-    setCount(count);
+    setCount((prevCount) => prevCount + 1);
   }
 
   return (
@@ -27,3 +26,7 @@ export default function BugMutatedState() {
 
 // Explanation:
 // (Write your explanation here)
+/*
+ * Before the change, it wasn't actually updating the state, it was increased with count++ and then updated the state.
+ * After the change, it was updating the state and then rerenders it onclick
+ */
