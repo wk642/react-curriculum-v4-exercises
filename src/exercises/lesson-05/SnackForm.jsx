@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './SnackForm.module.css';
 
 export default function SnackForm({
@@ -12,6 +12,18 @@ export default function SnackForm({
   const [name, setName] = useState('');
   const [rating, setRating] = useState('');
   const [touched, setTouched] = useState({ name: false, rating: false });
+
+  useEffect(() => {
+    if (editingSnack) {
+      setName(editingSnack.name || '');
+      setRating(String(editingSnack.rating ?? ''));
+    } else {
+      setName('');
+      setRating('');
+    }
+
+    setTouched({ name: false, rating: false });
+  }, [editingSnack]);
 
   function handleSubmit(e) {
     e.preventDefault();
