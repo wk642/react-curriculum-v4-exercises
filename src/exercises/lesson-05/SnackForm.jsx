@@ -25,6 +25,24 @@ export default function SnackForm({
     setTouched({ name: false, rating: false });
   }, [editingSnack]);
 
+  function validateName() {
+    return name.trim() !== '';
+  }
+
+  function validateRating() {
+    return rating !== '';
+  }
+
+  function getNameError() {
+    if (!touched.name || validateName()) return '';
+    return 'Snack name is required';
+  }
+
+  function getRatingError() {
+    if (!touched.rating || validateRating()) return '';
+    return 'Please select a rating';
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
